@@ -7,7 +7,11 @@ export const ChuckComponent = () => {
     function getChuck(){
         getRandomChuck()
         .then(res => {
-            setChuck(res.value)
+            console.log(res)
+            setChuck(res.data.value)
+        })
+        .catch(err => {
+            console.log(err)
         })
     }
   
